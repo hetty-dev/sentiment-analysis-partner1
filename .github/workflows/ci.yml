@@ -14,3 +14,8 @@ on:
       - "data/**"
       - "requirements.txt"
       - ".github/workflows/**"
+
+jobs:
+  run-formatter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
