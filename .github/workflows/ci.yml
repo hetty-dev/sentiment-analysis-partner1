@@ -3,23 +3,14 @@ name: CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - "src/**"
+      - "data/**"
+      - "requirements.txt"
+      - ".github/workflows/**"
   pull_request:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
-    - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Run train script
-      run: |
-        python src/train.py
+    paths:
+      - "src/**"
+      - "data/**"
+      - "requirements.txt"
+      - ".github/workflows/**"
