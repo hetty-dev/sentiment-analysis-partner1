@@ -37,3 +37,7 @@ jobs:
       - name: Run train script
         run: |
           python src/train.py
+
+      - name: Run the formatter script
+        run: |
+          python src/formatter.py --input data/raw_sales_data.csv --output data/cleaned_sales_data.csv
